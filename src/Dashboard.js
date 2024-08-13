@@ -141,11 +141,10 @@ export default function Dashboard({ toggleDarkMode, darkMode }) {
             className="flex items-center">
             <input
               type="text"
-              className={`w-full p-2 border ${
-                darkMode
-                  ? "bg-gray-800 border-white text-white"
-                  : "bg-white border-black text-black"
-              }`}
+              placeholder="Search User..."
+              className={
+                "w-full p-2 border border-black text-black dark:border-white "
+              }
               value={searchTerm}
               onChange={handleSearch}
             />
