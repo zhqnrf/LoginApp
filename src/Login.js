@@ -35,7 +35,7 @@ export default function Login({ darkMode }) {
   return (
     <div className={`w-full h-screen flex items-center justify-center `}>
       <div
-        className={`w-10/12 relative hover:transform hover:scale-105 hover:rotate-4 transition-transform duration-300 ${
+        className={`w-8/12 relative hover:transform hover:scale-105 hover:rotate-4 transition-transform duration-300 ${
           darkMode ? "bg-gray-800" : "bg-white"
         }`}>
         <div
