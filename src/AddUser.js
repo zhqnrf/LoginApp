@@ -31,9 +31,7 @@ export default function AddUser({ darkMode }) {
           <label className={`block `}>Name:</label>
           <input
             type="text"
-            className={`w-full p-2 border ${
-              darkMode ? "border-white bg-black " : "border-gray-300"
-            }`}
+            className={`w-full p-2 border `}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
