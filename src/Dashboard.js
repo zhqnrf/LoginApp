@@ -150,7 +150,7 @@ export default function Dashboard({ toggleDarkMode, darkMode }) {
             />
           </form>
 
-          <input
+          {/* <input
             type="text"
             className={`w-full p-2 border ${
               darkMode
@@ -159,7 +159,7 @@ export default function Dashboard({ toggleDarkMode, darkMode }) {
             }`}
             value={searchTerm}
             onChange={handleSearch}
-          />
+          /> */}
         </div>
 
         {currentUsers.length > 0 ? (
