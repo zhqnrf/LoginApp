@@ -42,7 +42,11 @@ export default function AddUser({ darkMode }) {
           <div className="relative">
             <input
               type={showPassword ? "text" : "password"}
-              className={`w-full p-2 border text-black`}
+              className={`w-full p-2 border ${
+                darkMode
+                  ? "bg-gray-800 border-white text-white"
+                  : "bg-white border-black text-black"
+              } `}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
