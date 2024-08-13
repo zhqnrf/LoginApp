@@ -50,9 +50,18 @@ export default function Dashboard({ toggleDarkMode, darkMode }) {
     setDropdownOpen(!dropdownOpen);
   };
 
+  useEffect(() => {
+    const savedSearchTerm = localStorage.getItem("searchTerm");
+    if (savedSearchTerm) {
+      setSearchTerm(savedSearchTerm);
+    }
+  }, []);
+
   const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
+    const value = e.target.value;
+    setSearchTerm(value);
     setCurrentPage(1);
+    localStorage.setItem("searchTerm", value);
   };
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
