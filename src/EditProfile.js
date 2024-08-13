@@ -43,7 +43,9 @@ export default function EditProfile({ darkMode }) {
           <input
             type="text"
             className={`w-full p-2 border ${
-              darkMode ? "border-white bg-black " : "border-gray-300"
+              darkMode
+                ? "bg-gray-800 border-white text-white"
+                : "bg-white border-black text-black"
             }`}
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -56,7 +58,9 @@ export default function EditProfile({ darkMode }) {
             <input
               type={showPassword ? "text" : "password"}
               className={`w-full p-2 border ${
-                darkMode ? "border-white bg-black " : "border-gray-300"
+                darkMode
+                  ? "bg-gray-800 border-white text-white"
+                  : "bg-white border-black text-black"
               }`}
               value={password}
               onChange={(e) => setPassword(e.target.value)}

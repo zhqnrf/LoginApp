@@ -46,7 +46,9 @@ export default function EditUser({ darkMode }) {
           <input
             type="text"
             className={`w-full p-2 border ${
-              darkMode ? "border-white bg-black " : "border-gray-300"
+              darkMode
+                ? "bg-gray-800 border-white text-white"
+                : "bg-white border-black text-black"
             }`}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -58,8 +60,10 @@ export default function EditUser({ darkMode }) {
           <div className="relative">
             <input
               type={showPassword ? "text" : "password"}
-              className={`w-full p-2 border ${
-                darkMode ? "border-white bg-black " : "border-gray-300"
+              className={`w-full p-2 border${
+                darkMode
+                  ? "bg-gray-800 border-white text-white"
+                  : "bg-white border-black text-black"
               }`}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
